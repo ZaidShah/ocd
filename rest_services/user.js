@@ -1,5 +1,5 @@
 'use strict';
-const UserService = require('../service/userService');
+const UserService = require('../services/userService');
 
 module.exports = class {
     static async list(ctx, next) {

@@ -1,7 +1,7 @@
 
 'use strict';
 
-const api = require('../api/user');
+const api = require('../rest_services/user');
 
 module.exports = class {
     static initialize(app, router) {

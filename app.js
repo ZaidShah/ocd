@@ -9,7 +9,7 @@ const app = new Koa();
 const routerMiddleware = new Router();
 const appRouter = require('./routes/router');
 
-const Database = require('./middleware/db');
+const Database = require('./middlewares/db');
 const databaseMiddleware = new Database();
 // const db = databaseMiddleware.initialize();
 

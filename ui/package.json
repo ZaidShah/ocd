@@ -1,0 +1,9 @@
+{
+  "name": "ui",
+  "version": "1.0.0",
+  "main": "./js/app.js",
+  "license": "MIT",
+  "dependencies": {
+    "angular": "^1.7.3"
+  }
+}
