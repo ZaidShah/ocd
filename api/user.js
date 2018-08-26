@@ -2,7 +2,7 @@
 const UserService = require('../service/userService');
 
 module.exports = class {
-    static async index(ctx, next) {
+    static async list(ctx, next) {
         try {
             const userService = new UserService(ctx);
             ctx.body = await userService.findAll();           

@@ -2,7 +2,7 @@
 
 const Koa = require('koa');
 const Router = require('koa-router');
-
+const serve = require('koa-static');
 
 const app = new Koa();
 
@@ -17,14 +17,9 @@ appRouter.initialize(app, routerMiddleware);
 
 
 app
+  .use(serve('./ui'))
   .use(databaseMiddleware.setup)
   .use(routerMiddleware.routes())
   .use(routerMiddleware.allowedMethods());
 
-
-
 app.listen(8999);
-
-app.on('error', (err, ctx) => {
-  log.error('server error', err, ctx)
-});
